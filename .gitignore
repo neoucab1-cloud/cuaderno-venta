@@ -1,0 +1,17 @@
+node_modules/
+build/
+dist/
+release/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Electron
+electron/tmp/
+*.blockmap
+
+# IDE
+.vscode/
+.idea/
