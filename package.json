@@ -8,9 +8,10 @@
   "main": "electron/main.js",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "electron:dev": "set ELECTRON_DEV=true && electron .",
+    "electron:dev": "node scripts/electron-dev.cjs",
     "build": "vite build",
     "electron:build": "vite build && electron-builder --win",
+    "package:win": "npm run build && electron-builder --win portable",
     "preview": "vite preview",
     "clean": "rm -rf dist release server.js",
     "lint": "tsc --noEmit"
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
+    "cross-env": "^10.1.0",
     "electron": "^43.0.0",
     "electron-builder": "^26.15.3",
     "tailwindcss": "^4.1.14",
@@ -46,7 +48,8 @@
       "electron/**/*"
     ],
     "win": {
-      "target": "portable"
+      "target": "portable",
+      "icon": "build/icon.ico"
     }
   }
 }

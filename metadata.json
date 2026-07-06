@@ -1,6 +1,0 @@
-{
-  "name": "Registro de Ventas",
-  "description": "Aplicación local para registrar ventas diarias, ver estadísticas y exportar datos.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
